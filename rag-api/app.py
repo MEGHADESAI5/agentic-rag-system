@@ -86,7 +86,7 @@ def chat():
     if any(word in query.lower() for word in trigger_words):
         try:
             tool_server_url = os.getenv("TOOL_SERVER_URL", "http://localhost:5001")
-resp = requests.get(f"{tool_server_url}/api/companies")
+            resp = requests.get(f"{tool_server_url}/api/companies")
             if resp.status_code == 200:
                 companies = resp.json().get('data', [])
                 tool_data = json.dumps(companies, indent=2)
