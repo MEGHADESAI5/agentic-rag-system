@@ -8,14 +8,15 @@ from rag_engine import HybridRAGEngine
 from llm_client import LLMClient
 import requests
 
-# Load .env from the correct location
-basedir = Path(__file__).parent.parent / 'backend'
-load_dotenv(os.path.join(basedir, '.env'))
+from dotenv import load_dotenv
+import os
 
-# Debug check (remove this line after confirmation)
-print(f"✅ Loading .env from: {os.path.join(basedir, '.env')}")
-print(f"🔑 GROQ_API_KEY loaded: {'✅' if os.getenv('GROQ_API_KEY') else '❌ NOT FOUND'}")
+# Load .env locally (does nothing on Render if no .env file exists)
+load_dotenv()
 
+print("🔑 GROQ_API_KEY loaded:", "✅ FOUND" if os.getenv("GROQ_API_KEY") else "❌ NOT FOUND")
+print("🔑 GEMINI_API_KEY loaded:", "✅ FOUND" if os.getenv("GEMINI_API_KEY") else "❌ NOT FOUND")
+print("🔗 TOOL_SERVER_URL:", os.getenv("TOOL_SERVER_URL"))
 app = Flask(__name__)
 CORS(app, origins="*")  # Allow all origins
 
