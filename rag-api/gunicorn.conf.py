@@ -1,4 +1,4 @@
-# gunicorn.conf.py
+import os
 import multiprocessing
 
 # Force a single worker to drastically reduce memory usage
