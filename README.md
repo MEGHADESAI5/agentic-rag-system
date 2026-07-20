@@ -55,6 +55,52 @@ It combines **hybrid search** (BM25 + Chroma), **agentic tool calling**, **conve
 
 ---
 
+
+## 📸 Live Demo
+
+Here is a real conversation with the Agentic RAG System, showing how it extracts information from a resume, remembers context, and provides verifiable source citations.
+
+### 🧑‍💻 Demo 1: Extracting Student Information
+
+![Ask Name](assets/demo-ask-name.png)
+*The system extracts the student's name and provides source citations (PDF + Page Number).*
+
+---
+
+### 📄 Demo 2: Complete Resume Parsing
+
+![Extracted Info](assets/demo-extracted-info.png)
+*The system parses the entire resume, extracting education, projects, certifications, and skills.*
+
+---
+
+### 🧠 Demo 3: Conversational Memory
+
+![Context Memory](assets/demo-context.png)
+*The system remembers previous context (e.g., "this document appears to be a resume") and provides follow-up insights.*
+
+---
+
+### 📊 Demo 4: Resume Feedback
+
+![Feedback](assets/demo-feedback.png)
+*The system evaluates the resume and provides actionable feedback for a 7th-semester student.*
+
+---
+
+### 📋 Demo 5: Cross-Document Intelligence
+
+![Cross Document](assets/demo-cross-doc.png)
+*The system switches context from the resume to the Job Description (MTS Intern Gen AI) and provides tailored feedback.*
+
+---
+
+### 🔍 Demo 6: Source Citations
+
+![Sources](assets/demo-final.png)
+*Every answer includes verifiable source citations—eliminating hallucinations and building user trust.*
+
+
 ## 🚀 Quick Start
 
 ### 1. Clone the Repository
